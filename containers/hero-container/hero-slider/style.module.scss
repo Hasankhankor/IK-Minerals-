@@ -1,0 +1,55 @@
+@use "../../../style/variables.scss" as *;
+
+.heroSlider {
+    width: 569px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: transparent;
+        flex-direction: column;
+
+        &__slide {
+            display: flex;
+            justify-content: center;
+            border-radius: 50px;
+            width: max-content;
+        }
+
+        &__buttons {
+            width: 100%;
+            height: max-content;
+            padding: 20px;
+            gap: 2.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & button {
+                background: none;
+            }
+
+            &__bullet {
+                display: flex;
+                gap: 1rem;
+            }
+
+            & svg {
+                width: 24px !important;
+                height: 24px !important;
+                color: green; // Updated color to green
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .heroSlider {
+        display: none;
+    }
+}

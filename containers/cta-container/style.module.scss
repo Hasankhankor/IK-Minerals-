@@ -1,0 +1,178 @@
+@use "../../style/variables.scss" as *;
+
+.ctaSection{
+    position: relative;
+    height: 100vh;
+    backdrop-filter: blur(125px);
+    background: linear-gradient(135deg, #1a9c41 0%, #1a9c41 48.50%, #07c020 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__inner{
+        width: $page-format;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 4;
+        gap: 10rem;
+
+        &__info{
+            width: 54.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: flex-end;
+            text-align: right;
+            &__title{
+                color: #1a9c41;
+
+                & span{
+                    text-align: right;
+                    font-size: 4rem;
+                    font-style: normal;
+                    font-weight: 400;
+                }
+                & h1{
+                font-size: 6.4rem;
+                font-style: normal;
+                font-weight: 700;
+                }
+            }
+            &__price{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                & span{
+                    color: #9c1a1a;
+                    font-size: 2.4rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    text-decoration:line-through;
+                }
+                & h3{
+                    color: #1a9c41;
+                    text-align: center;
+                    font-size: 7rem;
+                    font-weight: 700;
+                }
+            }
+            &__description{
+
+                & p{
+                    color: #1a9c41;
+                    font-size: 1.6rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 2.4rem;
+                    width: 40rem;
+                }
+            }
+        }
+        &__img{
+            &__frame{
+                width: 74.4rem;
+                height: 74.4rem;
+                max-width: 744px;
+                max-height: 744px;
+                flex-shrink: 0;
+                background-color: rgba(255, 255, 255, 0.247);
+                border-radius: 50%;
+                position: relative;
+                display: grid;
+                place-items: center;
+                & img{
+                    position: relative;
+                    z-index: 3;
+                    width: 24.8rem;
+                    max-width: 248px;
+                    height: 24.8rem;
+                    max-height: 248px;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    background-color: white;
+                    border-radius: 50%;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 36.4rem;
+                    height: 36.4rem;
+                    max-width: 364px;
+                    max-height: 364px;
+                    box-shadow: 0px 4px 50px 0px rgba(120, 143, 156, 0.25);
+                    left: 0;
+                    right: 0;
+                    margin: auto ;
+
+
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 50%;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 57rem;
+                    max-width: 570px;
+                    height: 57rem;
+                    max-height: 570px;
+                    box-shadow: 0px 4px 50px 0px rgba(120, 143, 156, 0.25);
+                    left: 0;
+                    right: 0;
+                    margin: auto ;
+
+
+                }
+            }
+        }
+    }
+    &__wave{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 3;
+        & img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+
+        }
+    }
+}
+
+
+@media (max-width:1200px) {
+    .ctaSection{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        &__wave{
+            display: none;
+        }
+        &__inner{
+            justify-content: center;
+            & button{
+                background-color: transparent;
+                color: white;
+            }
+            &__info{
+                align-items: center;
+                text-align: center;
+                & p{
+                    color: white;
+                }
+            }
+            &__img{
+                display: none;
+
+            }
+        }
+    }
+}

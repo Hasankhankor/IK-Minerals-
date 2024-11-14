@@ -1,0 +1,41 @@
+.filterDropdown{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+    align-items: center;
+    position: relative;
+    & p{
+        color: #31546D;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+    }
+    &__current{
+        width: max-content;
+        padding: 1rem 0;
+    }
+    &__button{
+        cursor: pointer;
+    }
+    &__menu{
+        position: absolute;
+        width: max-content;
+        min-width: 100%;
+        height: max-content;
+        left: 0;
+        top: 100%;
+        z-index: 2;
+        background-color: white;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        transition:.5s ease;
+        overflow: hidden;
+        & p{
+            cursor: pointer;
+        }
+    }
+}

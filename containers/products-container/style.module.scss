@@ -1,0 +1,79 @@
+@use "../../style/variables.scss" as *;
+.productsSection{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    background-color: white;
+    &__inner{
+        width: $page-format;
+        height: 100%;
+    }
+    &__title{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        & h2{
+            color: #0d9129;
+            text-align: center;
+            font-size: 4.6rem;
+            font-style: normal;
+            font-weight: 700;
+        }
+        & hr{
+            border: none;
+            width: 5.8rem;
+            height: .4rem;
+            background: #F2F2F2;
+        }
+    }
+    &__body{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5rem;
+        &__items{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.7rem;
+            row-gap: 3rem;
+            align-items: center;
+            justify-content:space-between;
+        }
+        &__filter{
+            width: 100%;
+            display: flex;
+            gap: 10rem;
+            &__type{
+                display: flex;
+                align-items: center;
+                & span{
+                    color: #00a01b;
+                    font-size: 1.6rem;
+                    font-style: normal;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+
+    .productsSection{
+        &__inner{
+
+        }
+        &__body{
+            &__items{
+                justify-content: center;
+            }
+        }
+    }
+}

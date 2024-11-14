@@ -1,0 +1,58 @@
+.heroInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    &__title{
+        & span{
+            color: #FFF;
+            font-size: 4rem;
+            font-style: normal;
+            font-weight: 400;
+        }
+        & h1{
+            color: #FFF;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 65px;
+        }
+    }
+
+    &__desc{
+        width: 40rem;
+        & p{
+            color: #fff;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+        }
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        & a{
+            color: #318931;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .heroInfo{
+        display: flex;
+        text-align: center;
+        &__desc{
+            width: 100%;
+        }
+        &__buttons{
+            width: 100%;
+            justify-content: center;
+        }
+
+    }
+}

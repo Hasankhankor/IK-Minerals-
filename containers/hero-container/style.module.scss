@@ -1,0 +1,70 @@
+@use "../../style/variables.scss" as *;
+
+.heroSection {
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(125px);
+    background: linear-gradient(135deg, #14532d 0%, #1a9c41 35%, #3ac92d 65%, #63c910 100%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &__inner {
+        width: $page-format;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        z-index: 2;
+        justify-content: space-between;
+        &__cta {
+            position: absolute;
+            display: flex;
+            width: max-content;
+            left: 0;
+            right: 0;
+            bottom: 6rem;
+            margin: 0 auto;
+            gap: 1.6rem;
+            align-items: center;
+            & span {
+                color: #1a9c41;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 500;
+            }
+        }
+        &__wave {
+            position: absolute;
+            width: 100%;
+            height: 70%;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: flex-end;
+            z-index: 0;
+            pointer-events: none;
+            z-index: 1;
+            & img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                bottom: -1px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .heroSection {
+        display: flex;
+
+        &__inner {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &__wave {
+                display: none;
+            }
+        }
+    }
+}
