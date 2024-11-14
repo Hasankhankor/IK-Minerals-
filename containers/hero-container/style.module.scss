@@ -8,6 +8,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+
     &__inner {
         width: $page-format;
         position: relative;
@@ -16,6 +17,7 @@
         align-items: center;
         z-index: 2;
         justify-content: space-between;
+
         &__cta {
             position: absolute;
             display: flex;
@@ -26,6 +28,7 @@
             margin: 0 auto;
             gap: 1.6rem;
             align-items: center;
+
             & span {
                 color: #1a9c41;
                 font-size: 1.6rem;
@@ -33,6 +36,7 @@
                 font-weight: 500;
             }
         }
+
         &__wave {
             position: absolute;
             width: 100%;
@@ -44,6 +48,7 @@
             z-index: 0;
             pointer-events: none;
             z-index: 1;
+
             & img {
                 position: absolute;
                 width: 100%;
@@ -56,14 +61,37 @@
 
 @media (max-width: 1200px) {
     .heroSection {
-        display: flex;
-
         &__inner {
             flex-direction: column;
             justify-content: center;
             align-items: center;
             &__wave {
                 display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        height: auto;
+        padding: 2rem;
+
+        &__inner {
+            width: 100%;
+            flex-direction: column;
+            padding: 1rem;
+            align-items: center;
+            text-align: center;
+
+            &__cta {
+                flex-direction: column;
+                bottom: 2rem;
+                gap: 1rem;
+
+                & span {
+                    font-size: 1.4rem;
+                }
             }
         }
     }
